@@ -1,4 +1,7 @@
-from gameFunctions import generateShoe, generatePlayers, startGame, stillPlaying
+from gameFunctions import (generateShoe,
+                           generatePlayers,
+                           startGame,
+                           stillPlaying)
 
 
 def playGame():
