@@ -1,4 +1,4 @@
-from gameFunctions import generateShoe, generatePlayers, startGame
+from gameFunctions import generateShoe, generatePlayers, startGame, stillPlaying
 
 
 def playGame():
@@ -16,13 +16,5 @@ if __name__ == "__main__":
     playing = True
     while playing is True:
         playGame()
-        while True:
-            stillPlaying = input("Play again? (Y/N)")
-            if stillPlaying.lower() not in "yn":
-                print("Please enter Y or N to continue")
-                continue
-            else:
-                break
-
-        if stillPlaying.lower() == 'n':
-            playing = False
+        if stillPlaying() is False:
+            break

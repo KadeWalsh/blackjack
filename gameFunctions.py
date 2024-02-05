@@ -132,3 +132,16 @@ def startGame(cardShoe, playerList):
     # Print finished hand results to verify results
     print()
     print(*playerList, sep="\n")
+
+
+def stillPlaying():
+    while True:
+        playing = input("Play again? (Y/N)")
+        if playing.lower() not in "yn":
+            print("Please enter Y or N to continue")
+            continue
+        else:
+            if playing.lower() == 'n':
+                return False
+            else:
+                return True
